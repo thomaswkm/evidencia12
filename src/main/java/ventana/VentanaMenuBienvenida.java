@@ -15,12 +15,17 @@ public class VentanaMenuBienvenida extends Ventana {
     private Intranet intranet;
 
     public VentanaMenuBienvenida(Intranet intranet) {
-        super("Menu ventas", 500, 520);
+        super("Menu Intranet", 500, 520);
         this.intranet=intranet;
         generarElementosVentana();
     }
 
     private void generarElementosVentana() {
+        generarMensajeMenu();
+        generarBotonRegistrarEstudiante();
+        generarBotonRegistrarCarrera();
+        generarBotonBuscarEstudiante();
+        generarBotonSalir();
     }
 
     private void generarMensajeMenu() {
@@ -30,7 +35,7 @@ public class VentanaMenuBienvenida extends Ventana {
 
     private void generarBotonRegistrarEstudiante() {
         String textoBoton = "Registrar Estudiante";
-        this.botonRegistrarEstudiante = super.generarBoton(textoBoton, 175, 100, 150, 40);
+        this.botonRegistrarEstudiante = super.generarBoton(textoBoton, 150, 100, 200, 40);
         this.add(this.botonRegistrarEstudiante);
         this.botonRegistrarEstudiante.addActionListener(this);
     }
@@ -42,13 +47,13 @@ public class VentanaMenuBienvenida extends Ventana {
     }
     private void generarBotonRegistrarCarrera() {
         String textoBoton = "Registrar Carrera";
-        this.botonRegistrarCarrera = super.generarBoton(textoBoton, 175, 180, 150, 40);
+        this.botonRegistrarCarrera = super.generarBoton(textoBoton, 150, 180, 200, 40);
         this.add(this.botonRegistrarCarrera);
         this.botonRegistrarCarrera.addActionListener(this);
     }
     private void generarBotonBuscarEstudiante(){
         String textoBoton = "Buscar Estudiante";
-        this.botonBuscarEstudiante=super.generarBoton(textoBoton, 175, 260, 150, 40);
+        this.botonBuscarEstudiante=super.generarBoton(textoBoton, 150, 260, 200, 40);
         this.add(this.botonBuscarEstudiante);
         this.botonBuscarEstudiante.addActionListener(this);
     }
@@ -61,11 +66,11 @@ public class VentanaMenuBienvenida extends Ventana {
             this.dispose();
         }
         if(e.getSource() == this.botonRegistrarCarrera){
-            VentanaRegistroCarrera ventanaRegistroCarrera= new VentanaRegistroCarrera(intranet);
+            VentanaRegistrarCarrera ventanaRegistrarCarrera= new VentanaRegistrarCarrera(intranet);
             this.dispose();
         }
         if(e.getSource() == this.botonBuscarEstudiante){
-            VentanaBusquedaEstudiante ventanaBusquedaEstudiante= new VentanaBusquedaEstudiante(intranet);
+            VentanaBuscarEstudiante ventanaBuscarEstudiante= new VentanaBuscarEstudiante(intranet);
             this.dispose();
         }
         if(e.getSource() == this.botonSalida){

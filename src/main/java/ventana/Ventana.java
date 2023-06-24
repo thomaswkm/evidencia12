@@ -49,15 +49,17 @@ public class Ventana extends JFrame implements ActionListener{
 
     protected InternationalFormatter generarFormato(int minimo){
         InternationalFormatter formato=new InternationalFormatter();
-        formato.setMinimum(new Integer(minimo));
+        formato.setMinimum(Integer.valueOf(minimo));
 
 
         return formato;
     }
     protected InternationalFormatter generarFormato(int minimo, int maximo){
         InternationalFormatter formato=new InternationalFormatter();
-        formato.setMinimum(new Integer(minimo));
-        formato.setMaximum(new Integer(maximo));
+        formato.setMinimum(Integer.valueOf(minimo));
+        formato.setMaximum(Integer.valueOf(maximo));
+
+
 
         return formato;
     }
