@@ -16,6 +16,14 @@ public class Carrera {
         this.estudiantes = estudiantes;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getCantidadSemestres() {
+        return cantidadSemestres;
+    }
+
     public ArrayList<Estudiante> getEstudiantes() {
         return estudiantes;
     }
@@ -23,6 +31,8 @@ public class Carrera {
     public String getCodigo() {
         return codigo;
     }
+
+
 }
 
 

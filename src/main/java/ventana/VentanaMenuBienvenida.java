@@ -1,5 +1,6 @@
 package ventana;
 
+import data.GestorDatos;
 import model.Intranet;
 
 import javax.swing.*;
@@ -74,7 +75,7 @@ public class VentanaMenuBienvenida extends Ventana {
             this.dispose();
         }
         if(e.getSource() == this.botonSalida){
-            //AutomotoraController.almacenarDatos(this.intranet);
+            GestorDatos.guardarDatos(this.intranet);
             this.dispose();
             System.exit(0);
         }

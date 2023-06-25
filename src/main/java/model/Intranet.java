@@ -14,6 +14,14 @@ public class Intranet {
         this.estudiantes = estudiantes;
     }
 
+    public ArrayList<Carrera> getCarreras() {
+        return carreras;
+    }
+
+    public ArrayList<Estudiante> getEstudiantes() {
+        return estudiantes;
+    }
+
     public boolean añadirEstudiante(String rut, String nombre, String apellido, String matricula, String codigoCarrera) {
         Estudiante estudiante = null;
         try {

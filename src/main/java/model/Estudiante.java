@@ -26,6 +26,18 @@ public class Estudiante {
         return carrera;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
     @Override
     public String toString() {
         return "Estudiante{" +
